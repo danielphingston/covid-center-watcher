@@ -71,7 +71,15 @@ async function handler() {
     const district = process.env.DISTRICT;
 
     const resp = await fetch(
-        `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${district}&date=${date}`
+        `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${district}&date=${date}`,
+        {
+            headers: {
+                accept: "application/json",
+                "Accept-Language": "hi_IN",
+                "user-agent":
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+            },
+        }
     );
     const { centers } = await resp.json();
     const processedData = await processData(centers);
