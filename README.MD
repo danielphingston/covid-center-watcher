@@ -25,8 +25,8 @@ GOOGLE_SHEET_URL=
 
 ## Additional info
 
-- Deploy to lambda and use run on a rate limit
-- This form is used to add email to the list [Google Form](https://forms.gle/NhpiVLHCNcAr6VoNA)
+- Deploy to lambda and run with cron
+
 
 
 
